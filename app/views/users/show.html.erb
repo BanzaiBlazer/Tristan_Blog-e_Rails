@@ -1,0 +1,7 @@
+<!-- ruby language in a html, needs to end with a ruby "end" and 
+shown have a html paragraph tag for it to dsiplay -->
+
+<p>Did you know that <%= @user.fname %> is wanted in <%= rand(20) %> different states?</p>
+
+<%= link_to("delete", user_path(@user.id), method: :delete)%>
+<%= link_to("edit", edit_user_path(@user.id))%>

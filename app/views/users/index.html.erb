@@ -1,0 +1,8 @@
+<!-- ruby language in a html, needs to end with a ruby "end" and 
+shown have a html paragraph tag for it to dsiplay -->
+
+<h1>Dumbass Users</h1>
+
+<%= @users.each do |user| %>
+	<p><%= user.name %><p>
+<% end %>

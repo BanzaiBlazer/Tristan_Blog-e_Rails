@@ -1,0 +1,16 @@
+<h1>Users#profile</h1>
+<p>Find me in app/views/users/profile.html.erb</p>
+
+<p>Profile<p>
+<p><%= @user.name %></p>
+<p><%= @user.email %></p>
+
+<p>Ur Dumb Posts</p>
+
+<%= @users.each do |posts| %>
+	<p><%= user.post %><p>
+<% end %>
+
+
+<%= link_to("delete", user_path(@user.id), method: :delete)%>
+<%= link_to("edit", edit_user_path(@user.id))%>

@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Blog-e</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
+</head>
+<body>
+	
+	<header>
+		<!-- Logo that links to homepage. -->
+		<a href="/home"><img src="Images/Blog-e.png" width="367" height="152" /></a>
+		
+		<nav>
+			<ul>
+				<li><a href="/users">Home</a></li>
+				<li><a href="/users/new">Sign Up</a></li>
+				<li><a href="/users/sign_out">Sign Out</a></li>
+				<li><a href="/users/profile">Profile</a></li>
+				<!-- <li><a href="/login">Login</a></li> Login link was not working, commented out-->
+				
+			</ul>
+		</nav\>
+	</header>
+
+	<%= yield %>
+
+	<footer>
+		<p>&copy; October 2015</p>
+	</footer>
+</body>
+</html>
