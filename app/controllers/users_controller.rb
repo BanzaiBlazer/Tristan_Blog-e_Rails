@@ -48,20 +48,19 @@ class UsersController < ApplicationController
 
   def destroy
     # puts "Calling users#destroy with #{params[:id]}"
-    @user = User.find(session[:user_id])
-    @user.delete
-    if @user.destroy!
-      session[:user_id].destroy
-      redirect_to new_user_path
-      flash[:notice] = "Mucho delete"
-    else
-      flash[:notice] = "Oh noes"
-    end
+    user = User.find(session[:user_id])
+    user.delete
+    # if user.destroy!
+    #   session[:user_id].destroy
+    #   redirect_to new_user_path
+    #   flash[:notice] = "Mucho delete"
+    # else
+    #   flash[:notice] = "Oh noes"
+    # end
   end
 
   def create
   	User.create(params[:user])
-    binding.pry
   	redirect_to "/users"
   end
 
