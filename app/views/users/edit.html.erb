@@ -7,3 +7,5 @@
 <p><%=f.text_field :password %></p>
 <%=f.submit :edit %>
 <% end %>
+
+<%= link_to "Delete", user_path(@user), method: :delete%>
