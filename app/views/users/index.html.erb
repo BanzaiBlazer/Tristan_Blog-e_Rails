@@ -6,3 +6,12 @@ shown have a html paragraph tag for it to dsiplay -->
 <% @users.each do |user| %>
 	<p><%= user.name %></p>
 <% end %>
+
+</br>
+
+<!-- Post must be singular for displaying, while designating the posts from the database must be plural -->
+
+<h1>Dumbass Posts</h1>
+<% @posts.each do |post| %>
+<p><%= post.id %>: reading: <%= post.content %></p>
+<% end %>

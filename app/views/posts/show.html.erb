@@ -1,0 +1,15 @@
+<!-- gets the profile with post.user.name
+then post.content gets the post itself...
+we can associate the post with the user -->
+<% if session[:user_id] %>
+
+<p>
+<%= @post.user.name %>	:
+<%= @post.content %>
+</p>
+
+<% else %>
+
+<p>There no content, dude.</p>
+
+<% end %>

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
   	@users = User.all
+    @posts = Post.all
   end
 
   # def fact
@@ -77,6 +78,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+
   # def current_user
   #   if session[:user_id]
   #     @current_user = User.find(session[:user_id])

@@ -1,11 +1,25 @@
 <h1>Profile</h1>
 <% if session[:user_id] %>
-<p> You are logged in! Hi <%= @user.name %></p>
+	<p> You are logged in! Hi <%= @user.name %></p>
 
-<%= link_to "edit", edit_user_path(@user)%>
+	</br>
 
-<p><a href="/profile">Profile</a></p>
+	<%= link_to "edit", edit_user_path(@user)%>
 
 <% else %>
-<p> Who are you? Log in please! </p>
+	<p> Who are you? Log in please! </p>
+<% end %>
+
+<% if !session[:user_id] %>
+	<p> You cannot make posts yet...</p>
+<% else %>
+
+	<p> Wanna make a new post?</p>
+
+	<%= form_tag '/postnew' do %>
+		<%= label_tag 'Post' %>
+		<%= text_field_tag 'Post' %>
+		<%= link_to "post", new_post_path(@post)%>
+
+	<% end %>
 <% end %>

@@ -14,8 +14,11 @@ Rails.application.routes.draw do
 
   get '/profile', to: 'users#profile'
 
+  get '/postnew', to: 'post#new'
+
 # we are going to get the back end data into the front end with this
 # as a start
   resources :users
+  resources :posts
 
 end
