@@ -1,0 +1,12 @@
+<% if session[:user_id] %>
+
+<p>
+<%= @post.user.name %>	:
+<%= @post.content %>
+</p>
+
+<% else %>
+
+<p>There no content, dude.</p>
+
+<% end %>

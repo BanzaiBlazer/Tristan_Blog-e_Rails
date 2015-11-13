@@ -16,10 +16,9 @@
 
 	<p> Wanna make a new post?</p>
 
-	<%= form_tag '/postnew' do %>
+	<%= form_for Post.new do %> 
 		<%= label_tag 'Post' %>
 		<%= text_field_tag 'Post' %>
-		<%= link_to "post", new_post_path(@post)%>
-
+		<%= submit_tag "Submit" %>
 	<% end %>
 <% end %>

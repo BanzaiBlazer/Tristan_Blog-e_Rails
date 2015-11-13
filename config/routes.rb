@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
  
   # get 'users/index'
+  root 'users#index'
 
   get 'users/show'
 
@@ -13,8 +14,6 @@ Rails.application.routes.draw do
   post '/loginverify', to: 'users#loginverify'
 
   get '/profile', to: 'users#profile'
-
-  get '/postnew', to: 'post#new'
 
 # we are going to get the back end data into the front end with this
 # as a start
