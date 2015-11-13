@@ -34,7 +34,9 @@ gem 'pry-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem "factory_girl_rails"
 end
 
 group :development do
